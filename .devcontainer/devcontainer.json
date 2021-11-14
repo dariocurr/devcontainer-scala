@@ -4,6 +4,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
+		// avoid specifying args here to prevent errors when using classic docker build
 	},
 	"extensions": [
 		"scala-lang.scala",
