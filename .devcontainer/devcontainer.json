@@ -1,0 +1,13 @@
+// for format details, see https://aka.ms/vscode-remote/devcontainer.json
+{
+	"name": "Scala",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+	},
+	"extensions": [
+		"scala-lang.scala",
+		"formulahendry.code-runner",
+	],
+	"remoteUser": "vscode",
+}
