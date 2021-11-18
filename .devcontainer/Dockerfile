@@ -15,9 +15,7 @@ RUN groupadd --gid 1000 vscode \
 	&& chmod 0440 /etc/sudoers.d/vscode
 
 # install zsh
-RUN apt install zsh -y
-
-# install ohmyzsh
 USER vscode
-RUN sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-COPY .devcontainer/.zshrc .
+RUN sudo apt install zsh -y \
+	&& sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+COPY .devcontainer/.zshrc /home/vscode/
