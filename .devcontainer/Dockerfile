@@ -16,6 +16,7 @@ RUN groupadd --gid 1000 vscode \
 
 # install zsh
 USER vscode
+WORKDIR /home/vscode/
 RUN sudo apt install zsh -y \
-	&& sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-COPY .devcontainer/.zshrc /home/vscode/
+	&& git clone https://github.com/zsh-users/antigen.git .antigen
+COPY .devcontainer/.zshrc .
