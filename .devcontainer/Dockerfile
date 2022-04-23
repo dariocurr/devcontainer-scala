@@ -18,5 +18,5 @@ RUN groupadd --gid 1000 vscode \
 USER vscode
 WORKDIR /home/vscode/
 RUN sudo apt -qq install zsh -y \
-	&& git clone -q https://github.com/zsh-users/antigen.git .antigen
-ADD --chown=vscode https://git.io/JMakD .zshrc
+	&& git clone -q github.com/zsh-users/antigen.git .antigen
+ADD --chown=vscode gist.githubusercontent.com/dariocurr/9792ae1fb6ddf736d8fea9e20eb13e26/raw/ .zshrc
