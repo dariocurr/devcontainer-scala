@@ -4,11 +4,9 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
-		// avoid specifying args here to prevent errors when using classic docker build
+		"args": {
+			"USER": "scala"
+		}
 	},
-	"extensions": [
-		"scala-lang.scala",
-		"formulahendry.code-runner",
-	],
-	"remoteUser": "vscode",
+	"remoteUser": "scala"
 }
